@@ -5,12 +5,14 @@ import * as courseActions from '../../actions/courseActions';
 import CourseList from './CourseList';
 import {browserHistory} from 'react-router';
 
+// Constructor - initialize state and bind functions
 class CoursesPage extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);
   }
 
+  // Child function that are called by render
   courseRow(course, index) {
     return <div key={index}>{course.title}</div>;
   }
